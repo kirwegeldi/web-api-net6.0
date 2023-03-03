@@ -14,7 +14,7 @@ namespace HPlusSport.API.Controllers
             _context = context;
             _context.Database.EnsureCreated();
         }
-        [HttpGet("all-products")]
+        [HttpGet]
         public async Task<ActionResult> GetAllProducts()
         {
             return Ok(await _context.Products.ToArrayAsync());
@@ -29,5 +29,27 @@ namespace HPlusSport.API.Controllers
             }
             return Ok(product);
         }
+        
+        #region Explaination of [FromBody] [FromRoute] [FromQuety]
+            /*
+                [FromBody] : Data from the body of the HTTP request , mostly used with HttpPost and HttpPut
+
+                [FromRoute] : Data from the route template (for example enterng an productId to URL)
+
+                [FromQuery] : Data from the URL 
+             */
+        #endregion
+        
+        [HttpPost]
+        public async Task<ActionResult> PostProduct(Product product)
+        {
+            _context.Products.Add(product);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(
+                "GetProduct",
+                new {Id = product.Id},
+                product);
+        }
+
     }
 }
