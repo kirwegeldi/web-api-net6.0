@@ -13,16 +13,20 @@ namespace HPlusSport.API.Controllers
             _context = context;
             _context.Database.EnsureCreated();
         }
-        [HttpGet("get-all-products")]
+        [HttpGet("all-products")]
         public ActionResult GetAllProducts()
         {
             var products = _context.Products.ToList();
             return Ok(products);
         }
-        [HttpGet("get-product-by-id/{Id}")]
+        [HttpGet("{Id}")]
         public ActionResult GetProductById(int Id)
         {
-            var product = _context.Products.FirstOrDefault(n => n.Id == Id);
+            var product = _context.Products.Find(Id);
+            if(product == null)
+            {
+                return NotFound();
+            }
             return Ok(product);
         }
     }
