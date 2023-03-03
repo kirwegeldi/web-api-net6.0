@@ -39,7 +39,6 @@ namespace HPlusSport.API.Controllers
                 [FromQuery] : Data from the URL 
              */
         #endregion
-        
         [HttpPost]
         public async Task<ActionResult> PostProduct(Product product)
         {
@@ -54,7 +53,8 @@ namespace HPlusSport.API.Controllers
                 new {Id = product.Id},
                 product);
         }
-        [HttpPut("put-{Id}")]
+        
+        [HttpPut("{Id}")]
         public async Task<ActionResult> PutProduct(int Id, Product product)
         {
             if(Id != product.Id)
@@ -83,5 +83,31 @@ namespace HPlusSport.API.Controllers
             return NoContent();
         }
 
+        [HttpDelete("{Id}")]
+        public async Task<ActionResult<Product>> DeleteProduct(int Id)
+        {
+            var _product = await _context.Products.FindAsync(Id);
+            if(_product == null)
+            {
+                return NotFound();
+            }
+            _context.Products.Remove(_product);
+            await _context.SaveChangesAsync();
+            return _product;
+
+        }
+        [HttpDelete]
+        [Route("Delete")]
+        public async Task<ActionResult<List<Product>>> DeleteManyItem([FromQuery]int[] Ids)
+        {
+            var _products = await _context.Products.Where(n => Ids.Any(m => m == n.Id)).ToListAsync(); 
+            if(Ids.Length > _products.Count)
+            {
+                return NotFound();
+            }
+            _context.RemoveRange(_products);
+            await _context.SaveChangesAsync();
+            return _products;
+        }
     }
 }
