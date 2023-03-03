@@ -54,6 +54,34 @@ namespace HPlusSport.API.Controllers
                 new {Id = product.Id},
                 product);
         }
+        [HttpPut("put-{Id}")]
+        public async Task<ActionResult> PutProduct(int Id, Product product)
+        {
+            if(Id != product.Id)
+                return BadRequest();
+
+            // product has been changed here    
+            _context.Entry(product).State = EntityState.Modified;
+
+            #region Why try catch used here?
+                /* Try to save changes but what if this product has been 
+                changed or deleted by any other asyc request?
+                -> So catch statement checks whether if product is still in the context or if it has been changed.
+                If it does not exist then it returns not-found*/
+            #endregion
+            try
+            {
+                await _context.SaveChangesAsync();      
+            }
+            catch
+            {
+                if(!_context.Products.Any(n => n.Id == Id))
+                    return NotFound();
+                else
+                    throw;
+            }
+            return NoContent();
+        }
 
     }
 }

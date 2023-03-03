@@ -1,3 +1,4 @@
+#nullable disable
 using Microsoft.EntityFrameworkCore;
 
 namespace HPlusSport.API.Models

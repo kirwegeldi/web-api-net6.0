@@ -1,3 +1,4 @@
+#nullable disable
 namespace HPlusSport.API.Models
 {
     public class Category
