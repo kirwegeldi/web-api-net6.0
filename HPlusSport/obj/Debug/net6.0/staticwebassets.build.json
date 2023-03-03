@@ -1,0 +1,17 @@
+{
+  "Version": 1,
+<<<<<<< HEAD
+  "Hash": "H/8P9zsqC8qF0KgayMahUeC9VbfWO9f+8k0Hu0OnfFI=",
+  "Source": "HPlusSport",
+  "BasePath": "_content/HPlusSport",
+=======
+  "Hash": "ZAksyju1u4iH2F/OItR/bZLwk+egs6CSFJfjO3nW1V0=",
+  "Source": "HPlusSport.API",
+  "BasePath": "_content/HPlusSport.API",
+>>>>>>> 9a228be (edited to be inital project.)
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

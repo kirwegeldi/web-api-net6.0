@@ -1,0 +1,44 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+<<<<<<< HEAD
+      "applicationUrl": "http://localhost:40479",
+      "sslPort": 44353
+    }
+  },
+  "profiles": {
+    "HPlusSport": {
+=======
+      "applicationUrl": "http://localhost:62828",
+      "sslPort": 44362
+    }
+  },
+  "profiles": {
+    "HPlusSport.API": {
+>>>>>>> 9a228be (edited to be inital project.)
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+<<<<<<< HEAD
+      "applicationUrl": "https://localhost:7001;http://localhost:5184",
+=======
+      "applicationUrl": "https://localhost:7010;http://localhost:5147",
+>>>>>>> 9a228be (edited to be inital project.)
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

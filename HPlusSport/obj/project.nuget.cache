@@ -1,0 +1,21 @@
+{
+  "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "y75EJZpeIawltknmbV5A/S7uASUe9lXXy64iHWEC6MY6ySS6jfKyz938ZMSKcSWwEDpvlKLIW1S+7qZuUXY+pg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Şerif Aksoy\\Desktop\\Tutorials\\ASP NET Core\\02-NET7\\HPlusSport\\HPlusSport.csproj",
+=======
+  "dgSpecHash": "QhQZdhDI3MbmexZiVE4ytQ3//8JWgXbhPsdpUCgzDYonDUwA7R7zTkMGpQDwNmzfSQAjCEXwi7c0kJ6IJYaU6g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Şerif Aksoy\\Desktop\\Tutorials\\ASP NET Core\\02-NET7\\HPlusSport\\HPlusSport.API.csproj",
+>>>>>>> 9a228be (edited to be inital project.)
+  "expectedPackageFiles": [
+    "C:\\Users\\Şerif Aksoy\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Şerif Aksoy\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Şerif Aksoy\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\Şerif Aksoy\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\Şerif Aksoy\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\Şerif Aksoy\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
